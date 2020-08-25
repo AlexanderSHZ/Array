@@ -140,6 +140,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="11matrix.cpp" />
+    <ClCompile Include="22matrix.cpp" />
+    <ClCompile Include="Print.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>

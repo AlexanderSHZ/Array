@@ -1,9 +1,9 @@
 #include "Header.h"
 
 
-struct Array1 createArray(struct Array1 ArrayElements)
+struct Array1D createArray(struct Array1D ArrayElements)
 {
-    ArrayElements.arrayLength = ArrayElements.rows * ArrayElements.column * ArrayElements.depth;
+    ArrayElements.arrayLength = ArrayElements.rows * ArrayElements.column;
 
     ArrayElements.arrayPtr = (int*)malloc(sizeof(int) * ArrayElements.arrayLength);
     if (ArrayElements.arrayPtr == NULL)
@@ -13,7 +13,7 @@ struct Array1 createArray(struct Array1 ArrayElements)
     return ArrayElements;
 }
 
-struct Array1 fillArray(struct Array1 ArrayElements)
+struct Array1D fillArray(struct Array1D ArrayElements)
 {
     fflush(stdout);
 
@@ -21,28 +21,13 @@ struct Array1 fillArray(struct Array1 ArrayElements)
     {
         cin >> ArrayElements.arrayPtr[i];
     }
-    return ArrayElements
+    return ArrayElements;
 }
 
-int print(struct Array1 ArrayElements)
-{
-    for (int i = 0; i < ArrayElements.arrayLength; i++)
+
+int freeMemory(struct Array1D ArrayElements)
     {
-        cout << setw(6) << ArrayElements.arrayPtr[i];
-        if (i % (ArrayElements.rows - 1) == 0)
-        {
-            printf("\n");
-        }
+        free(ArrayElements.arrayPtr);
 
-        printf("\n");
+        return 0;
     }
-    return 0;
-}
-
-int freeMemory(struct Array1 ArrayElements)
-{
-
-    free(ArrayElements.arrayPtr[]);
-
-    return 0;
-}

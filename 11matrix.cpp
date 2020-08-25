@@ -1,25 +1,21 @@
 ﻿#include "Header.h"
 
-
-
 int main()
 {
-    Array ArrayElements;
+    Array1D ArrayElements;
     
-    printf("Enter number of rows \n");
+    printf("Hello, enter the number of rows in matrix \n");
     scanf("%d", &ArrayElements.rows);
-    printf("Enter number of columns \n");
+    printf("Enter the number of columns \n");
     scanf("%d", &ArrayElements.column);
-    printf("Enter number of depth \n");
-    scanf("%d", &ArrayElements.depth);
  
-    ArrayElements = createArray(ArrayElements);      //Выделение места под массив массивов.
+    ArrayElements = createArray(ArrayElements);      
 
-    printf("Enter numbers to the massive \n");
+    printf("Enter numbers to the matrix \n");
 
-    fillArray(ArrayElements);                   //Заполнение массива.
+    fillArray(ArrayElements);               
 
-   // print(ArrayElements);                       //Вывод массива на консоль.
+    print(ArrayElements);                      
    
     int i = 0;
     cin >> i;

@@ -6,23 +6,23 @@ using namespace std;
 
 #pragma warning(disable : 4996)
 
-struct Array createArray(struct Array ArrayElements);
+struct Array1D createArray(struct Array1D ArrayElements);
 
-struct Array fillArray(struct Array ArrayElements);
+struct Array1D fillArray(struct Array1D ArrayElements);
 
-int freeMemory(struct Array ArrayElements);
+int freeMemory(struct Array1D ArrayElements);
 
 
-int print(struct Array ArrayElements);
+int print(struct Array1D ArrayElements);
 
-struct Array
+struct Array2D
 {
-    int rows, column, depth;
-    int*** arrayPtr = NULL;
+    int rows, column;
+    int** arrayPtr = NULL;
 };
 
-struct Array1
+struct Array1D
 {
-    int rows, column, depth, arrayLength;
+    int rows, column, arrayLength;
     int* arrayPtr = NULL;
 };
