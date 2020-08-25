@@ -1,14 +1,7 @@
 #include "Header.h"
 
-int main()
-{
-    
-}
 
-
-
-
-struct Array createArray(struct Array ArrayElements)
+struct Array1 createArray(struct Array1 ArrayElements)
 {
     ArrayElements.arrayLength = ArrayElements.rows * ArrayElements.column * ArrayElements.depth;
 
@@ -20,17 +13,18 @@ struct Array createArray(struct Array ArrayElements)
     return ArrayElements;
 }
 
-struct Array fillArray(struct Array ArrayElements)
+struct Array1 fillArray(struct Array1 ArrayElements)
 {
     fflush(stdout);
-       
+
     for (int i = 0; i < ArrayElements.arrayLength; i++)
     {
         cin >> ArrayElements.arrayPtr[i];
     }
+    return ArrayElements
 }
 
-int print(struct Array ArrayElements)
+int print(struct Array1 ArrayElements)
 {
     for (int i = 0; i < ArrayElements.arrayLength; i++)
     {
@@ -39,16 +33,16 @@ int print(struct Array ArrayElements)
         {
             printf("\n");
         }
-        
+
         printf("\n");
     }
     return 0;
 }
 
-int freeMemory(struct Array ArrayElements)
+int freeMemory(struct Array1 ArrayElements)
 {
-   
-    free(ArrayElements.arrayPtr);
+
+    free(ArrayElements.arrayPtr[]);
 
     return 0;
 }
