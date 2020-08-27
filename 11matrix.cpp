@@ -3,8 +3,27 @@
 int main()
 {
     Array1D ArrayElements;
+    Array2D ArrayElements;
     
-    printf("Hello, enter the number of rows in matrix \n");
+    int matrixDimension;
+    cout << "Hello, do you want to create 1 or 2 dimentional matrix? \n";
+    cin >> matrixDimension;
+    if (matrixDimension == 1)
+    {
+
+    }
+    else if (matrixDimension == 0)
+    {
+
+    }
+    else
+    {
+        cout << "Incorrect nuber of dimentions \n";
+    }
+
+        
+
+    
     scanf("%d", &ArrayElements.rows);
     printf("Enter the number of columns \n");
     scanf("%d", &ArrayElements.column);

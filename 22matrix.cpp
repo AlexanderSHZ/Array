@@ -17,17 +17,21 @@ struct Array1D fillArray(struct Array1D ArrayElements)
 {
     fflush(stdout);
 
-    for (int i = 0; i < ArrayElements.arrayLength; i++)
+    for (int i = 0; i < ArrayElements.rows; i++)
     {
-        cin >> ArrayElements.arrayPtr[i];
+        for (int j = 0; j < ArrayElements.column; j++)
+
+        {
+            //ArrayElements.arrayPtr[i * ArrayElements.column + j] = i * j;
+            cin >> ArrayElements.arrayPtr[i * ArrayElements.column + j];
+        }
     }
     return ArrayElements;
 }
 
-
 int freeMemory(struct Array1D ArrayElements)
-    {
-        free(ArrayElements.arrayPtr);
+{
+    free(ArrayElements.arrayPtr);
 
-        return 0;
-    }
+    return 0;
+}
