@@ -2,19 +2,21 @@
 
 int main()
 {
-    Array1D ArrayElements;
-    Array2D ArrayElements;
+    Array1D ArrayElements1D;
+    Array2D ArrayElements2D;
+
+   
     
     int matrixDimension;
     cout << "Hello, do you want to create 1 or 2 dimentional matrix? \n";
     cin >> matrixDimension;
     if (matrixDimension == 1)
     {
-
+        createArray1D(ArrayElements1D);
     }
-    else if (matrixDimension == 0)
+    else if (matrixDimension == 2)
     {
-
+        createArray2D(ArrayElements2D);
     }
     else
     {
@@ -24,22 +26,22 @@ int main()
         
 
     
-    scanf("%d", &ArrayElements.rows);
+   // scanf("%d", &ArrayElements.rows);
     printf("Enter the number of columns \n");
-    scanf("%d", &ArrayElements.column);
+   // scanf("%d", &ArrayElements.column);
  
-    ArrayElements = createArray(ArrayElements);      
+   // ArrayElements = createArray(ArrayElements);      
 
     printf("Enter numbers to the matrix \n");
 
-    fillArray(ArrayElements);               
+  //  fillArray(ArrayElements);               
 
-    print(ArrayElements);                      
+   // print(ArrayElements);                      
    
     int i = 0;
     cin >> i;
     
-    freeMemory(ArrayElements);
+   // freeMemory(ArrayElements);
     cin >> i;
     return 0;
 }

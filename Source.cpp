@@ -1,6 +1,6 @@
 #include "Header.h"
 
-struct Array2D createArray(struct Array2D ArrayElements)
+struct Array2D createArray2D(struct Array2D ArrayElements)
 {
 
     ArrayElements.arrayPtr = (int**)malloc(sizeof(int*) * ArrayElements.rows);

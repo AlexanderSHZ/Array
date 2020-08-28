@@ -1,7 +1,7 @@
 #include "Header.h"
 
 
-struct Array1D createArray(struct Array1D ArrayElements)
+struct Array1D createArray1D(struct Array1D ArrayElements)
 {
     ArrayElements.arrayLength = ArrayElements.rows * ArrayElements.column;
 
