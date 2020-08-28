@@ -9,12 +9,20 @@ using namespace std;
 struct Array1D createArray1D(struct Array1D ArrayElements);
 struct Array2D createArray2D(struct Array2D ArrayElements);
 
-struct Array1D fillArray(struct Array1D ArrayElements);
+struct Array1D fillArray1D(struct Array1D ArrayElements);
+struct Array2D fillArray2D(struct Array2D ArrayElements);
 
-int freeMemory(struct Array1D ArrayElements);
+int freeMemory1D(struct Array1D ArrayElements);
+int freeMemory2D(struct Array2D ArrayElements);
 
+int print1D(struct Array1D ArrayElements);
+int print2D(struct Array2D ArrayElements);
 
-int print(struct Array1D ArrayElements);
+struct Array1D
+{
+    int rows, column;
+    int* arrayPtr = NULL;
+};
 
 struct Array2D
 {
@@ -22,16 +30,5 @@ struct Array2D
     int** arrayPtr = NULL;
 };
 
-struct Array1D
-{
-    int rows, column, arrayLength;
-    int* arrayPtr = NULL;
-};
 
-struct Array
-{
-    int myType = 0;
-    int rows, column;
-    int* arrayPtr1 = NULL;
-    int** arrayPtr2 = NULL;
-};
+

@@ -16,7 +16,7 @@ struct Array2D createArray2D(struct Array2D ArrayElements)
     return ArrayElements;
 }
 
-struct Array2D fillArray(struct Array2D ArrayElements)
+struct Array2D fillArray2D(struct Array2D ArrayElements)
 {
     fflush(stdout);
 
@@ -32,7 +32,7 @@ struct Array2D fillArray(struct Array2D ArrayElements)
     return ArrayElements;
 }
 
-int freeMemory(struct Array2D ArrayElements)
+int freeMemory2D(struct Array2D ArrayElements)
 {
     for (int i = 0; i < ArrayElements.rows; i++)
     {

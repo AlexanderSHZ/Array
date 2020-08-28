@@ -5,7 +5,7 @@ struct Array1D createArray1D(struct Array1D ArrayElements)
 {
     ArrayElements.arrayLength = ArrayElements.rows * ArrayElements.column;
 
-    ArrayElements.arrayPtr = (int*)malloc(sizeof(int) * ArrayElements.arrayLength);
+    ArrayElements.arrayPtr = (int*)malloc(sizeof(int) * ArrayElements.rows * ArrayElements.column);
     if (ArrayElements.arrayPtr == NULL)
     {
 
@@ -13,7 +13,7 @@ struct Array1D createArray1D(struct Array1D ArrayElements)
     return ArrayElements;
 }
 
-struct Array1D fillArray(struct Array1D ArrayElements)
+struct Array1D fillArray1D(struct Array1D ArrayElements)
 {
     fflush(stdout);
 
@@ -29,7 +29,7 @@ struct Array1D fillArray(struct Array1D ArrayElements)
     return ArrayElements;
 }
 
-int freeMemory(struct Array1D ArrayElements)
+int freeMemory1D(struct Array1D ArrayElements)
 {
     free(ArrayElements.arrayPtr);
 

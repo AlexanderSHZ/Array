@@ -1,6 +1,6 @@
 #include "Header.h"
 
-int print(struct Array1D ArrayElements)
+int print1D(struct Array1D ArrayElements)
 {
     for (int i = 0; i < ArrayElements.rows; i++)
     {
@@ -15,7 +15,7 @@ int print(struct Array1D ArrayElements)
     return 0;
 }
 
-int print(struct Array2D ArrayElements)
+int print2D(struct Array2D ArrayElements)
 {
     for (int i = 0; i < ArrayElements.rows; i++)
     {
